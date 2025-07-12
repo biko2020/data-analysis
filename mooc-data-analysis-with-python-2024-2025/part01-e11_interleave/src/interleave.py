@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 def interleave(*lists):
-    return []
+
+    result = []
+    for LL in zip(*lists):
+        result.extend(LL)
+    return result
 
 def main():
     print(interleave([1, 2, 3], [20, 30, 40], ['a', 'b', 'c']))
