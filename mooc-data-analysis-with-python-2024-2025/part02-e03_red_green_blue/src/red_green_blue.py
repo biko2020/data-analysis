@@ -9,7 +9,10 @@ def red_green_blue(filename="src/rgb.txt"):
         for line in file:
             match = re.match(r'\s*(\d+)\s+(\d+)\s+(\d+)\s+(.*\S)', line)
             if match:
-                red, green, blue, color = match.groups()
+                red =match.group(1)
+                green=match.group(2)
+                blue=match.group(3)
+                color=match.group(4).strip()
                 result.append(f"{red}\t{green}\t{blue}\t{color}")
     return result
 
